@@ -12,6 +12,7 @@
         <module>game</module>
         <module>goh-api</module>
         <module>core</module>
+        <module>math</module>
     </modules>
 
     <properties>
