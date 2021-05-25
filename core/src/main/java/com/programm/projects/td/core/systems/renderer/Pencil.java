@@ -1,4 +1,4 @@
-package com.programm.projects.td.core;
+package com.programm.projects.td.core.systems.renderer;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

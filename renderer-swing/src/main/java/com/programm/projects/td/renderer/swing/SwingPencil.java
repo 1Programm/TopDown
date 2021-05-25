@@ -1,6 +1,6 @@
 package com.programm.projects.td.renderer.swing;
 
-import com.programm.projects.td.core.Pencil;
+import com.programm.projects.td.core.systems.renderer.Pencil;
 import com.programm.projects.td.math.Vector1f;
 import com.programm.projects.td.math.Vector2f;
 

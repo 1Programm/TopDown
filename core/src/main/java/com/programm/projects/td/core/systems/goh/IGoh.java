@@ -3,7 +3,7 @@ package com.programm.projects.td.core.systems.goh;
 import com.programm.projects.td.core.GameContext;
 import com.programm.projects.td.core.GameObject;
 import com.programm.projects.td.core.ISubsystem;
-import com.programm.projects.td.core.Pencil;
+import com.programm.projects.td.core.systems.renderer.Pencil;
 
 public interface IGoh extends ISubsystem {
 

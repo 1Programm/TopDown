@@ -2,7 +2,7 @@ package com.programm.projects.td.goh.simple;
 
 import com.programm.projects.td.core.GameContext;
 import com.programm.projects.td.core.GameObject;
-import com.programm.projects.td.core.Pencil;
+import com.programm.projects.td.core.systems.renderer.Pencil;
 import com.programm.projects.td.core.events.IEventHandler;
 import com.programm.projects.td.core.systems.goh.CollisionInfo;
 import com.programm.projects.td.core.systems.goh.IGoh;
