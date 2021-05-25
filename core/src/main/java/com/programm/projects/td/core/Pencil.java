@@ -29,7 +29,5 @@ public interface Pencil {
 
     Pencil rotated(float rotation);
 
-    Pencil rotatedAround(float rotation, float x, float y);
-
 
 }

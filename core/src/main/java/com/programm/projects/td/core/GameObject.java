@@ -32,9 +32,9 @@ public class GameObject {
         }
     }
 
-    public void render(Pencil p) {
+    public void render(GameContext context, Pencil p) {
         for(int i=0;i<renderableList.size();i++){
-            renderableList.get(i).render(p);
+            renderableList.get(i).render(p, context, this);
         }
     }
 
@@ -44,5 +44,15 @@ public class GameObject {
 
     public boolean isDead() {
         return dead;
+    }
+
+    public GameObject addBehavior(IBehavior behavior){
+        behaviorList.add(behavior);
+        return this;
+    }
+
+    public GameObject addRenderable(IRenderable renderable){
+        renderableList.add(renderable);
+        return this;
     }
 }
