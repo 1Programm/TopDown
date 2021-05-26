@@ -21,7 +21,6 @@ public class SwingRenderer implements IRenderer {
 
     @Override
     public void startup(IEventHandler events) {
-        window.setLocationRelativeTo(null);
         window.setVisible(true);
     }
 
@@ -47,8 +46,10 @@ public class SwingRenderer implements IRenderer {
         Graphics g = bs.getDrawGraphics();
         pencil.g = (Graphics2D) g;
 
-        g.setColor(Color.WHITE);
+        g.setColor(Color.GREEN);
         g.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
+
+        //System.out.println(canvas.getWidth() + " " + canvas.getHeight());
 
         context.goh().render(context, pencil);
 

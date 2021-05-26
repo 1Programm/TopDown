@@ -5,6 +5,14 @@ public interface WindowSettings {
     void title(String title);
     String title();
 
+    void xpos(int xpos);
+    int xpos();
+
+    void ypos(int ypos);
+    int ypos();
+
+    void centerPosition();
+
     void width(int width);
     int width();
 

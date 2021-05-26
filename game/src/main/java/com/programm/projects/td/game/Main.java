@@ -2,6 +2,8 @@ package com.programm.projects.td.game;
 
 import com.programm.projects.td.core.GameObject;
 import com.programm.projects.td.core.ex.TDException;
+import com.programm.projects.td.game.tdgame.PlayerBehavior;
+import com.programm.projects.td.game.tdgame.PlayerRenderable;
 import lombok.extern.slf4j.Slf4j;
 
 import java.awt.*;
@@ -13,19 +15,15 @@ public class Main {
         Game game = new Game();
         game.init(args);
 
-        GameObject o = new GameObject(100, 100, 64, 64);
-        o.addRenderable((context, p, obj) -> {
-            p.setColor(Color.BLACK);
-            p.fillRect(obj.getPosition().getX(), obj.getPosition().getY(), obj.getSize().getX(), obj.getSize().getY());
-        });
-        o.addBehavior((context, obj) -> {
-            obj.getPosition().add(1.1f, 0);
-        });
+        GameObject o = new GameObject(100, 100, 50, 50);
+        o.addRenderable(new PlayerRenderable(Color.BLACK, Color.RED));
+        o.addBehavior(new PlayerBehavior());
 
         game.goh().addObject(o);
 
         game.settings().window().title("TEST");
-        game.settings().window().size(600, 500);
+        game.settings().window().size(250, 250);
+        game.settings().window().centerPosition();
 
         game.start();
     }

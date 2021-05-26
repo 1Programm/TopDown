@@ -25,6 +25,9 @@ public class SwingWindow extends JFrame implements WindowSettings, WindowListene
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.add(canvas);
         this.pack();
+
+        this.setMinimumSize(new Dimension());
+        canvas.setMinimumSize(new Dimension());
     }
 
     @Override
@@ -38,34 +41,61 @@ public class SwingWindow extends JFrame implements WindowSettings, WindowListene
     }
 
     @Override
+    public void xpos(int xpos) {
+        int y = ypos();
+        this.setLocation(xpos, y);
+    }
+
+    @Override
+    public int xpos() {
+        return this.getX();
+    }
+
+    @Override
+    public void ypos(int ypos) {
+        int x = xpos();
+        this.setLocation(x, ypos);
+    }
+
+    @Override
+    public int ypos() {
+        return this.getY();
+    }
+
+    @Override
+    public void centerPosition() {
+        this.setLocationRelativeTo(null);
+    }
+
+    @Override
     public void width(int width) {
         size.width = width;
         canvas.setPreferredSize(size);
-        this.setSize(size);
+        this.setSize(size.width, size.height + 28);
     }
 
     @Override
     public int width() {
-        return size.width;
+        return canvas.getWidth();
     }
 
     @Override
     public void height(int height) {
         size.height = height;
         canvas.setPreferredSize(size);
-        this.setSize(size);
+        this.setSize(size.width, size.height + 28);
     }
 
     @Override
     public int height() {
-        return size.height;
+        return canvas.getHeight();
     }
 
     @Override
     public void size(int width, int height) {
         size.setSize(width, height);
         canvas.setPreferredSize(size);
-        this.setSize(size);
+        this.setSize(size.width, size.height + 28);
     }
 
     //WINDOW LISTENER
