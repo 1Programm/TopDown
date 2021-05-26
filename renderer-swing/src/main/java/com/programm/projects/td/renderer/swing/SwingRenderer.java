@@ -45,9 +45,10 @@ public class SwingRenderer implements IRenderer {
         }
 
         Graphics g = bs.getDrawGraphics();
-        if(pencil.g == null) {
-            pencil.g = (Graphics2D) g;
-        }
+        pencil.g = (Graphics2D) g;
+
+        g.setColor(Color.WHITE);
+        g.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
 
         context.goh().render(context, pencil);
 

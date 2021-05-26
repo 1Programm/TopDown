@@ -29,13 +29,13 @@ public class GameObject {
 
     public void update(GameContext context) {
         for(int i=0;i<behaviorList.size();i++){
-            behaviorList.get(i).update(this, context);
+            behaviorList.get(i).update(context, this);
         }
     }
 
     public void render(GameContext context, Pencil p) {
         for(int i=0;i<renderableList.size();i++){
-            renderableList.get(i).render(p, context, this);
+            renderableList.get(i).render(context, p, this);
         }
     }
 

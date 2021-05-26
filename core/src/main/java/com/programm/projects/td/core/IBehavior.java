@@ -2,6 +2,6 @@ package com.programm.projects.td.core;
 
 public interface IBehavior {
 
-    void update(GameObject object, GameContext context);
+    void update(GameContext context, GameObject obj);
 
 }
