@@ -15,6 +15,9 @@ public class Main {
         Game game = new Game();
         game.init(args);
 
+
+        game.start();
+
         GameObject o = new GameObject(100, 100, 50, 50);
         o.addRenderable(new PlayerRenderable(Color.BLACK, Color.RED));
         o.addBehavior(new PlayerBehavior());
@@ -25,7 +28,6 @@ public class Main {
         game.settings().window().size(250, 250);
         game.settings().window().centerPosition();
 
-        game.start();
     }
 
 }

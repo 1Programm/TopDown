@@ -11,6 +11,7 @@ public class PlayerBehavior implements IBehavior {
     private static final float SPEED_X = 0.5f;
     private static final float SPEED_Y = 0.7f;
 
+
     private final Vector2f vel = new Vector2f(SPEED_X, SPEED_Y);
 
     @Override

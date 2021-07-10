@@ -1,6 +1,7 @@
 package com.programm.projects.td.core;
 
 import com.programm.projects.td.core.systems.renderer.Pencil;
+import com.programm.projects.td.core.utils.PriorityList;
 import com.programm.projects.td.math.Vector1f;
 import com.programm.projects.td.math.Vector2f;
 import lombok.Getter;
@@ -15,7 +16,7 @@ public class GameObject {
     private final Vector2f size;
     private final Vector1f rotation;
 
-    private final List<IBehavior> behaviorList = new ArrayList<>();
+    private final PriorityList<IBehavior> behaviorList = new PriorityList<>();
     private final List<IRenderable> renderableList = new ArrayList<>();
 
     //Marker for GOH to know when to remove an object from the list
@@ -48,7 +49,7 @@ public class GameObject {
     }
 
     public GameObject addBehavior(IBehavior behavior){
-        behaviorList.add(behavior);
+        behaviorList.add(behavior, behavior.priority());
         return this;
     }
 
